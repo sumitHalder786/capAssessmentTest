@@ -34,7 +34,9 @@ const ItemList = (props) => {
     const { agentCode } = item || {};
 
     const selectedItemStyle =
-      agentCode === selectedItemAgentCode ? { backgroundColor: "green" } : {};
+      agentCode === selectedItemAgentCode
+        ? { backgroundColor: "#006699", color: "white" }
+        : {};
 
     return (
       <View key={index}>
@@ -43,25 +45,39 @@ const ItemList = (props) => {
           title={() => {
             return (
               <Text
-                style={[styles.textcolor, { textDecorationLine: "underline" }]}
+                style={[
+                  styles.textcolor,
+                  selectedItemStyle,
+                  { textDecorationLine: "underline" },
+                ]}
               >
                 {item.agentName}
               </Text>
             );
           }}
-          description={item.agentCode}
+          description={() => {
+            return (
+              <Text style={[{ color: "gray" }, selectedItemStyle]}>
+                {item.agentCode}
+              </Text>
+            );
+          }}
           left={(props) => {
             return (
               <View style={styles.listEleStyle}>
-                <Text style={styles.textcolor}>{index + 1}</Text>
-                <View style={styles.verticleLine}></View>
+                <Text style={[styles.textcolor, selectedItemStyle]}>
+                  {index + 1}
+                </Text>
+                <View style={[styles.verticleLine]}></View>
               </View>
             );
           }}
           right={(props) => {
             return (
               <View style={styles.listEleStyle}>
-                <Text style={{ fontWeight: "bold" }}>{item.prosp}</Text>
+                <Text style={[{ fontWeight: "bold" }, selectedItemStyle]}>
+                  {item.prosp}
+                </Text>
               </View>
             );
           }}
@@ -110,6 +126,7 @@ const ItemList = (props) => {
             renderItem={renderItem}
             keyExtractor={(item) => item.agentCode}
             style={styles.flatListStyle}
+            showsHorizontalScrollIndicator={false}
             ListFooterComponent={
               <View style={{ height: 0, marginBottom: 20 }}></View>
             }

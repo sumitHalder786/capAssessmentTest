@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
   },
   SearchSuggestionsContainer: {
     marginTop: 10,
-    paddingBottom: 20,
+    paddingBottom: 15,
     borderColor: "gray",
 
     borderWidth: 1,
     marginBottom: -220,
     zIndex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#F8F8F8",
   },
   arrowIconContainer: {
     marginBottom: 12,
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
   tileContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    backgroundColor: "#F8F8F8",
   },
 
   container: {

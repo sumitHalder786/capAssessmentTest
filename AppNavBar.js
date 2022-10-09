@@ -18,8 +18,6 @@ const AppNavBar = (props) => {
         style={{
           marginLeft: windowWidth * 0.2,
           color: "#000000",
-
-          fontFamily: "NotoSans-Bold",
         }}
       />
     </Appbar.Header>
