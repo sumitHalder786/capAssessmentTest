@@ -29,7 +29,7 @@ const TabBarView = (props) => {
           style={{
             color: focused ? "#006699" : "gray",
             marginRight: 40,
-            fontWeight: "bold",
+            fontFamily: "NotoSans_Regular",
           }}
         >
           {route.title}

@@ -61,7 +61,12 @@ const ItemList = (props) => {
           }}
           description={() => {
             return (
-              <Text style={[{ color: "gray" }, selectedItemStyle]}>
+              <Text
+                style={[
+                  { color: "gray", fontFamily: "NotoSans_Regular" },
+                  selectedItemStyle,
+                ]}
+              >
                 {item.agentCode}
               </Text>
             );
@@ -79,7 +84,12 @@ const ItemList = (props) => {
           right={(props) => {
             return (
               <View style={styles.listEleStyle}>
-                <Text style={[{ fontWeight: "bold" }, selectedItemStyle]}>
+                <Text
+                  style={[
+                    { fontFamily: "NotoSans_Regular" },
+                    selectedItemStyle,
+                  ]}
+                >
                   {item.prosp}
                 </Text>
               </View>
@@ -103,10 +113,12 @@ const ItemList = (props) => {
           }}
         >
           <View style={{ flexDirection: "row" }}>
-            <Text style={{ color: "gray", fontWeight: "bold" }}>
+            <Text style={{ color: "gray", fontFamily: "NotoSans_Regular" }}>
               No Result Found for{" "}
             </Text>
-            <Text style={{ fontWeight: "bold" }}>'{searchQuery}'</Text>
+            <Text style={{ fontFamily: "NotoSans_Regular" }}>
+              '{searchQuery}'
+            </Text>
           </View>
           <View>
             <TouchableOpacity
@@ -125,7 +137,7 @@ const ItemList = (props) => {
                 style={{
                   color: "white",
                   textAlign: "center",
-                  fontWeight: "bold",
+                  fontFamily: "NotoSans_Regular",
                 }}
               >
                 MAKE NEW SEARCH
@@ -138,12 +150,17 @@ const ItemList = (props) => {
           <View>
             <List.Item
               left={(props) => (
-                <Text style={{ fontWeight: "bold", color: "gray" }}>
+                <Text
+                  style={{
+                    color: "gray",
+                    fontFamily: "NotoSans_Regular",
+                  }}
+                >
                   {constants.fa_rank}
                 </Text>
               )}
               right={(props) => (
-                <Text style={{ fontWeight: "bold", color: "gray" }}>
+                <Text style={{ fontFamily: "NotoSans_Regular", color: "gray" }}>
                   {constants.no_of_prospect}
                 </Text>
               )}

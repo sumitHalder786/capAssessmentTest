@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     fontSize: 14,
     color: "gray",
-    fontWeight: "bold",
+    fontFamily: "NotoSans_Regular",
   },
   placeholderStyle: {
     fontSize: 16,
@@ -151,12 +151,12 @@ const styles = StyleSheet.create({
     borderColor: "gray",
     borderRadius: 5,
     paddingLeft: 15,
-    fontWeight: "bold",
+    fontFamily: "NotoSans_Regular",
   },
 
   textcolor: {
     color: "#006699",
-    fontWeight: "bold",
+    fontFamily: "NotoSans_Regular",
     fontSize: 16,
   },
 
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     paddingLeft: 18,
     textAlignVertical: "center",
-    fontWeight: "bold",
+    fontFamily: "NotoSans_Regular",
   },
 
   HorizonLine: {
