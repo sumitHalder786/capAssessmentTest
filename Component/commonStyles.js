@@ -80,9 +80,8 @@ const styles = StyleSheet.create({
   },
   popularSearchTileTitle: {
     color: "gray",
-    marginBottom: 12,
-    marginTop: 12,
-    paddingLeft: 30,
+    margin: 10,
+    fontSize: 16,
     textAlignVertical: "center",
   },
   tileContainer: {
@@ -179,13 +178,13 @@ const styles = StyleSheet.create({
   searchResultFooter: {
     color: "gray",
     marginTop: 15,
-    paddingLeft: 30,
+    paddingLeft: 18,
     textAlignVertical: "center",
     fontWeight: "bold",
   },
 
   HorizonLine: {
-    height: 0.5,
+    height: 0.8,
     width: "100%",
     backgroundColor: "#909090",
   },
