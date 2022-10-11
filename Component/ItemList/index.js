@@ -127,6 +127,7 @@ const ItemList = (props) => {
             keyExtractor={(item) => item.agentCode}
             style={styles.flatListStyle}
             showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
             ListFooterComponent={
               <View style={{ height: 0, marginBottom: 20 }}></View>
             }
