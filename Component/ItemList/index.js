@@ -3,6 +3,7 @@ import { View, Button, Dimensions } from "react-native";
 import { List, Text } from "react-native-paper";
 import { FlatList, TouchableOpacity } from "react-native";
 import styles from "../commonStyles";
+import constants from "../../Constant";
 
 const ItemList = (props) => {
   const { listData, selectedItemAgentCode, searchSuggestionData, searchQuery } =
@@ -138,12 +139,12 @@ const ItemList = (props) => {
             <List.Item
               left={(props) => (
                 <Text style={{ fontWeight: "bold", color: "gray" }}>
-                  FA Rank
+                  {constants.fa_rank}
                 </Text>
               )}
               right={(props) => (
                 <Text style={{ fontWeight: "bold", color: "gray" }}>
-                  No of Prospect
+                  {constants.no_of_prospect}
                 </Text>
               )}
             />
