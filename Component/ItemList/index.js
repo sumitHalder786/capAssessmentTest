@@ -1,7 +1,7 @@
 import * as React from "react";
 import { View, Button, Dimensions } from "react-native";
 import { List, Text } from "react-native-paper";
-import { FlatList } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import styles from "../commonStyles";
 
 const ItemList = (props) => {
@@ -38,6 +38,9 @@ const ItemList = (props) => {
         ? { backgroundColor: "#006699", color: "white" }
         : {};
 
+    const textDecorationLine =
+      agentCode === selectedItemAgentCode ? "none" : "underline";
+
     return (
       <View key={index}>
         <List.Item
@@ -48,7 +51,7 @@ const ItemList = (props) => {
                 style={[
                   styles.textcolor,
                   selectedItemStyle,
-                  { textDecorationLine: "underline" },
+                  { textDecorationLine: textDecorationLine },
                 ]}
               >
                 {item.agentName}
@@ -104,20 +107,45 @@ const ItemList = (props) => {
             </Text>
             <Text style={{ fontWeight: "bold" }}>'{searchQuery}'</Text>
           </View>
-          <View style={{ width: windowWidth * 0.9, marginTop: 8 }}>
-            <Button
-              onPress={() => {}}
-              title="Make a new Search"
-              color="#006699"
-            />
+          <View>
+            <TouchableOpacity
+              style={{
+                flex: 0.35,
+                width: windowWidth * 0.9,
+                marginTop: 8,
+                borderRadius: 8,
+                borderWidth: 1,
+                justifyContent: "center",
+                borderColor: "#006699",
+                backgroundColor: "#006699",
+              }}
+            >
+              <Text
+                style={{
+                  color: "white",
+                  textAlign: "center",
+                  fontWeight: "bold",
+                }}
+              >
+                MAKE NEW SEARCH
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       ) : (
         <>
           <View>
             <List.Item
-              left={(props) => <Text>FA Rank</Text>}
-              right={(props) => <Text>No of Prospect</Text>}
+              left={(props) => (
+                <Text style={{ fontWeight: "bold", color: "gray" }}>
+                  FA Rank
+                </Text>
+              )}
+              right={(props) => (
+                <Text style={{ fontWeight: "bold", color: "gray" }}>
+                  No of Prospect
+                </Text>
+              )}
             />
           </View>
           <FlatList

@@ -62,6 +62,15 @@ const styles = StyleSheet.create({
     marginTop: 12,
     textAlign: "right",
   },
+  AppNavbarStyle: {
+    backgroundColor: "transparent",
+    color: "#000000",
+    height: 50,
+    borderWidth: 1,
+    borderColor: "gray",
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+  },
   popularSearchTileContainer: {
     alignItems: "center",
     flex: 1,
@@ -80,6 +89,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     backgroundColor: "#F8F8F8",
+  },
+  flatListStyle: {
+    marginTop: -10,
   },
 
   container: {

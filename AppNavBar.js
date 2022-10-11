@@ -1,18 +1,11 @@
 import { Appbar } from "react-native-paper";
+import styles from "./Component/commonStyles";
 
 const AppNavBar = (props) => {
   const { windowWidth } = props;
   return (
-    <Appbar.Header
-      style={[
-        {
-          backgroundColor: "transparent",
-          color: "#000000",
-          width: windowWidth,
-        },
-      ]}
-    >
-      <Appbar.BackAction onPress={() => {}} />
+    <Appbar.Header style={[styles.AppNavbarStyle, { width: windowWidth }]}>
+      <Appbar.BackAction color="#006699" onPress={() => {}} />
       <Appbar.Content
         title="FA Ranking"
         style={{
